@@ -1,0 +1,16 @@
+/*
+Code for Euler Project Problem #002
+Coded in javascript
+*/
+
+let fibonacciArray = [0, 1];
+let sumOfEvens = 0;
+for (let n = 1; fibonacciArray[n] < 4000000; n++) {
+  fibonacciArray.push(fibonacciArray[n] + fibonacciArray[n-1]);
+  if (fibonacciArray[n + 1] % 2 == 0) {
+    sumOfEvens += fibonacciArray[n+1];
+  }
+
+}
+
+console.log(fibonacciArray, sumOfEvens)
