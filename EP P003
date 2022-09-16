@@ -24,6 +24,8 @@ for (let n = 3; n < squareRoot; n += 2 ) {
 
 console.log(factors);
 
+// Checking to see if the factors multiply to the original given number.
+
 let check = 1;
 for (let k = 0; k < factors.length; k++) {
   check = check * factors[k];
