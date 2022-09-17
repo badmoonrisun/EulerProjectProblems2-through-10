@@ -17,10 +17,16 @@ let increment = 1;
 let sum = lastNumber * (lastNumber + firstNumber) / 2;
 let squareOfSum = sum * sum;
 
+/* Old way to calculate the sum of the squares
+
 let sumOfSquares = 0;
 for (let n = firstNumber; n <= lastNumber; n += increment) {
   sumOfSquares = sumOfSquares + (n*n);
 }
 
+*/
+
+let sumOfSquares = lastNumber*(2*lastNumber + 1)*(lastNumber + 1)/6;
 let difference = squareOfSum - sumOfSquares;
+
 console.log(squareOfSum, sumOfSquares, difference);
