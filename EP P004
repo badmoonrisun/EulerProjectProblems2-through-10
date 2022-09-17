@@ -1,0 +1,43 @@
+/*
+Euler Project Problem 004
+
+This solution does not contain a sort function to check for the largest number.  Yet.
+
+A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+Find the largest palindrome made from the product of two 3-digit numbers.
+*/
+
+let m = 99;
+let j = 101;
+let a = 1;
+let numString = ' ';
+let len = 0;
+
+console.log(m*j);
+
+function palindrome(str) {
+  let len = str.length;
+  for (let k = 0; k < len/2; k++) {
+    if (str[k] !== str[len - 1 - k]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+let placeHolder = [1, 1, 1]
+let palindromeNum = [placeHolder];
+
+for (let n = 999; n > 900; n--) {
+  for (let i = 999; i > 900; i--) {
+    a = n * i;
+    numString = String(a);
+    if (palindrome(numString) == true) {
+      placeHolder = [a, n, i];
+      palindromeNum.push(placeHolder);
+    }
+  }
+}
+
+console.log(palindromeNum);
