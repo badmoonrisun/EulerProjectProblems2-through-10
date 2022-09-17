@@ -1,0 +1,26 @@
+/*
+Euler Project Problem 006
+
+The sum of the squares of the first ten natural numbers is, [picture] 385.
+
+The square of the sum of the first ten natural numbers is, [picture] 3025.
+
+Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is [picture] 2640.
+
+Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+*/
+
+let firstNumber = 1;
+let lastNumber = 100;
+let increment = 1;
+
+let sum = lastNumber * (lastNumber + firstNumber) / 2;
+let squareOfSum = sum * sum;
+
+let sumOfSquares = 0;
+for (let n = firstNumber; n <= lastNumber; n += increment) {
+  sumOfSquares = sumOfSquares + (n*n);
+}
+
+let difference = squareOfSum - sumOfSquares;
+console.log(squareOfSum, sumOfSquares, difference);
